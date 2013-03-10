@@ -1,0 +1,6 @@
+Vagrant::Config.run do |config|
+  config.vm.guest = :freebsd
+  config.vm.box = 'freebsd91'
+  config.vm.network :hostonly, '10.11.12.13'
+  config.vm.share_folder 'v-root', '/vagrant', '.', :nfs => true
+end
