@@ -4,5 +4,5 @@ Vagrant::Config.run do |config|
   config.vm.box_url = 'https://s3.amazonaws.com/vboxes-2112/freebsd91.box'
   config.vm.customize ["modifyvm", :id, "--memory", 2048]
   config.vm.network :hostonly, '10.11.12.13'
-  config.vm.share_folder 'v-root', '/vagrant', '.', :nfs => true
+  config.vm.share_folder 'vagrant-root', '/vagrant', '.', :nfs => true
 end
